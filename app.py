@@ -6,8 +6,14 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
+from dotenv import load_dotenv
+import os
 
-load_dotenv()
+load_dotenv()  # loads variables from .env into environment
+
+api_key = os.getenv("OPENROUTER_API_KEY")
+
+
 
 class CSVChatBot:
     def __init__(self):
